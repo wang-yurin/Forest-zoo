@@ -3,20 +3,46 @@
   box-sizing: border-box;
 }
 
+body,
 h1,
 p {
   margin: 0;
 }
 
-h1 {
+h1,
+p {
+  margin: 0;
   font-size: inherit;
-  font-weight: normal;
+  font-weight: inherit;
+}
+
+img {
+  vertical-align: top;
+}
+
+/* typography */
+:root {
+  word-break: keep-all;
 }
 
 /* layout */
-.container {
+.wrapper {
   width: 500px;
   margin: 100px auto;
+}
+
+/* design */
+body {
+  background-image: url(./images/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  /* 화면에 꽉 차도록 하고 싶어 height: 100vh를 주었는데 이렇게 하면 상하 스크롤이 생깁니다. 이런 현상이 왜 생기나요? */
+}
+
+.cover {
+  display: block;
+  margin: 0 auto;
 }
 
 .main {
@@ -24,33 +50,22 @@ h1 {
   margin: 0 auto;
 }
 
-.image {
-  display: block;
-  margin: 0 auto;
-}
-
-/* design */
-body {
-  background-image: url(./images/bg.png);
-}
-
-.main {
+.animal {
+  padding: 80px 20px 30px;
+  color: #fff;
   background-color: #94572e;
   background-image: url(./images/green.png);
   background-repeat: repeat-x;
-  padding: 80px 20px 30px;
-  color: #fff;
   border-radius: 0 0 20px 20px;
   box-shadow: 0 10px 0px #4a260b;
 }
 
-.title {
+.animal-title {
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 15px;
 }
 
-.description {
-  word-break: keep-all;
+.animal-description {
   color: #d2b9ab;
 }
